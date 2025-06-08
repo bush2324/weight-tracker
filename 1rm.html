@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>1RM 計算器</title>
+  <link rel="stylesheet" href="1rm.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>🧮 1RM 最大肌力計算器</h1>
+    <p>輸入你某項動作的訓練重量與次數，估算你的最大肌力（1RM）</p>
+
+    <form id="rmForm">
+      <label for="weight">重量（公斤）</label>
+      <input type="number" id="weight" required>
+
+      <label for="reps">次數</label>
+      <input type="number" id="reps" required>
+
+      <button type="submit">計算 1RM</button>
+    </form>
+
+    <div id="result" class="result"></div>
+
+    <a href="index.html" class="back">← 回首頁</a>
+  </div>
+
+  <script>
+    document.getElementById('rmForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const weight = parseFloat(document.getElementById('weight').value);
+      const reps = parseInt(document.getElementById('reps').value);
+
+      if (weight > 0 && reps > 0) {
+        // 使用 Epley 公式：1RM = 重量 × (1 + 次數 / 30)
+        const oneRM = Math.round(weight * (1 + reps / 30));
+        document.getElementById('result').textContent = `你的估計 1RM 是 ${oneRM} 公斤 💪`;
+      } else {
+        document.getElementById('result').textContent = '請輸入正確的數值';
+      }
+    });
+  </script>
+</body>
+</html>
