@@ -1,24 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Weight Training Tracker</title>
+  <title>🏋️‍♂️ 重量訓練助手</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>🏋️ Weight Training Tracker</h1>
-  
-  <form id="training-form">
-    <input type="text" id="exercise" placeholder="Exercise (e.g. Squat)" required />
-    <input type="number" id="weight" placeholder="Weight (kg)" required />
-    <input type="number" id="reps" placeholder="Reps" required />
-    <input type="number" id="sets" placeholder="Sets" required />
-    <button type="submit">Add</button>
-  </form>
-
-  <ul id="record-list"></ul>
-
-  <script src="script.js"></script>
+  <header>
+    <h1>🏋️‍♂️ 重量訓練助手</h1>
+    <p>打造你的專屬健身數據紀錄平台</p>
+  </header>
+  <main class="features">
+    <div class="card">
+      <h2>📓 訓練紀錄</h2>
+      <p>記錄每次訓練的重量、次數與訓練部位</p>
+    </div>
+    <div class="card">
+      <h2>🧮 1RM 計算機</h2>
+      <p>快速計算你的最大肌力</p>
+    </div>
+    <div class="card">
+      <h2>📆 訓練日曆</h2>
+      <p>一眼看出本週訓練分佈</p>
+    </div>
+    <div class="card">
+      <h2>📊 體重/BMI 追蹤</h2>
+      <p>追蹤你的體態變化</p>
+    </div>
+    <div class="card">
+      <h2>🎯 訓練目標</h2>
+      <p>設定並追蹤個人訓練挑戰</p>
+    </div>
+  </main>
 </body>
 </html>
